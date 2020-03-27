@@ -1,0 +1,772 @@
+/*
+    Master Layout and styling
+****************************************/
+
+header {
+  width: 100%;
+}
+
+.logo {
+  padding-bottom: 1em;
+  padding-left: 5px;
+  color: #D50032;
+}
+.logo-words {
+  max-width: 80%;
+}
+.container {
+  max-width: 1200px;
+}
+nav {
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  color: #D50032;
+  background-color: white;
+  text-decoration: none;
+  font-family: 'Tajawal', sans-serif;
+}
+
+nav ul li a {
+  text-align: center;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+.menu span, .close span {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  display: none
+}
+
+@media screen and (max-width: 1023px) {
+  nav a {
+    padding: .5em 1em;
+    border-bottom: 1px solid #cccccc;
+    background-color: white;
+    text-align: center;
+    display: block
+  }
+  nav ul li {
+    color: #D50032;
+    background-color: white;
+  }
+  .js .sticky-nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: white;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #cccccc;
+    box-shadow: 0 0 5px rgba(222, 222, 222, 0.8)
+  }
+  .menu {
+    z-index: 100;
+    position: fixed;
+    top: 10px;
+    right: .5em;
+    background: #D50032;
+    background-image: url(../images/menu-white.svg);
+    width: 32px;
+    height: 32px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    box-shadow: 0px 1px 2px 2px rgba(100, 100, 100, 0.5)
+  }
+  .close {
+    background-image: url(../images/clear-white.svg);
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 6px;
+    right: .5em
+  }
+}
+
+@media screen and (min-width: 64em) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-height: 200px;
+    background-color: white;
+    min-width: 100%
+
+  }
+  .header-shadow {
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  .logo {
+    display: flex;
+    align-items: flex-end;
+  }
+  .logo-words {
+    padding-left: 10%;
+  }
+  nav {
+  }
+  nav ul {
+    display: flex
+  }
+  nav ul li {
+    list-style: none;
+    display: inline;
+    margin: auto 0em auto auto;
+    padding: .5em 1em;
+  }
+  nav ul li:hover {
+    text-decoration: underline;
+  }
+  /* Dropdown Nav
+
+  **************************************/
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown-container {
+    position: relative;
+    display: inline-block;
+  }
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 220px;
+    box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 0px 0 10px 10px;
+    text-align: right;
+  }
+  /* Show the dropdown menu on hover */
+  .dropdown-container:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown-content a {
+    color: #D50032;
+    list-style: none;
+    display: list-item;
+    margin: auto 0em auto auto;
+    padding: .5em 1em;
+  }
+  .dropdown-content a:hover {
+    color: white;
+    background-color: #D50032;
+  }
+  .dropdown-content a:hover:first-child {
+    border-radius: 10px 10px 0 0;
+  }
+  .dropdown-content a:hover:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+header {
+  direction: ltr;
+}
+
+header, .sticky-nav {
+  margin: 0 auto 0 auto;
+  width: 100%;
+}
+
+.header-design img {
+  max-height: 125px;
+  padding-top: 5px;
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+  font-family: 'Tajawal', sans-serif;
+  background-image: url("/econ-website/images/background-pattern.jpg");
+  background-repeat: repeat;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.center-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+h1 {
+  font-size: 1.75em;
+  line-height: 1;
+  margin: 1em 0
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.0909;
+  margin: .5em 0
+}
+
+h3 {
+  font-size: 1.25em;
+  line-height: 1.2;
+  margin: 1.2em 0
+}
+
+h4 {
+  font-size: 1.125em;
+  line-height: 1.333;
+  margin: 1.333em 0
+}
+
+h5, h6 {
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 1.5em 0
+}
+
+p {
+  line-height: 1.5
+}
+
+footer {
+  background: #191919;
+  margin: 1em 0 0 0;
+  padding: .1em 0;
+  color: rgba(150, 150, 150, 1);
+  width: 100%;
+  text-align: center;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.footer-class {
+  margin: 0 auto 0 auto;
+  width: 88%;
+}
+
+.wrapper {
+  margin: 2em auto 2em auto;
+}
+
+.container {
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 1em;
+  padding-bottom: .5em;
+  box-shadow: 0px 0px 16px 16px rgba(0, 0, 0, 0.55);
+  margin: 0 auto 0 auto;
+  width: 80%;
+  min-height: 40vh;
+  text-align: justify;
+  background-color: white;
+}
+
+@media screen and (max-width: 64em) {
+  header img {
+    display: block;
+    margin: 0 auto;
+  }
+  /* Dropdown Nav
+
+  **************************************/
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown-container {
+    position: relative;
+  }
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px 0 10px 10px;
+  }
+  /* Show the dropdown menu on hover */
+  .dropdown-container:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown-content li {
+    color: white;
+    list-style: none;
+    display: list-item;
+    margin: auto 0em auto auto;
+    padding: .5em 1em;
+  }
+  .dropdown-content li:hover {
+    /*    background-color: #01b57e;
+*/
+  }
+}
+
+h1 {
+  font-weight: 700
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+/****************************************
+  Demand and Supply styling
+****************************************/
+#demand-and-supply h2 {
+  text-align: center;
+}
+
+#demand-and-supply .surplus {
+  border-radius: 16px;
+  border-style: dashed;
+  border-color: black;
+  padding: 10px;
+  height: 130px;
+}
+
+
+#demand-and-supply .surplus ul {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+#demand-and-supply .upper {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 64em;
+  margin: 0;
+}
+
+#consumerSurplus {
+  width: 0;
+  height: 0;
+  border-bottom: 60px solid blue;
+  border-right: 107px solid transparent;
+  /*else*/
+  display: none;
+  opacity: 0.7;
+  position: absolute;
+  right: 283px;
+  top: 64px;
+}
+
+#producerSurplus {
+  width: 0;
+  height: 0;
+  border-top: 58px solid green;
+  border-right: 107px solid transparent;
+  /*else*/
+  display: none;
+  opacity: 0.7;
+  position: absolute;
+  right: 283px;
+  top: 122px;
+}
+
+#demand-and-supply .chart {
+  padding-left: 3em;
+  width: 600px;
+  position: relative;
+}
+
+#demand-and-supply .explanation {
+  border-radius: 16px;
+  border-style: dashed;
+  border-color: black;
+  padding: 16px;
+  margin: 16px;
+}
+
+#demand-and-supply .explanation-header {
+  display: inline-block;
+  margin: 0;
+}
+
+#incomeError, #expIncomeIncNormal, #expIncomedecNormal, #expIncomeIncInferior,
+#expIncomedecInferior, #expPrefInc, #expPrefDec, #expSubInc, #expSubDec, #expCompInc,
+#expCompDec, #expAccessInc, #expAccessDec, #expFuturePInc, #expFuturePDec, #expFutureQInc,
+#expFutureQDec, #expFutureIInc, #expFutureIDec, #expBuyersInc, #expBuyersDec, #expPInputsInc,
+#expPInputsDec, #expTechInc, #expTechDec, #expProdInc, #expProdDec, #expSubsidy, #expTax,
+#expBothInc, #expBothDec, #expIncDDecS, #expDecDIncS
+{
+  display: none;
+}
+
+#demand-and-supply .lower {
+  text-align: center;
+  padding-bottom: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+#demand-and-supply .lower li {
+  width: 300px;
+}
+#demand-and-supply .align-sublist {
+    padding: 0px;
+    list-style-type: none;
+}
+#demand-and-supply .button-alignment {
+  display: flex;
+  justify-content: space-between;
+}
+
+#demand-and-supply .demand {
+  padding-right: 1em;
+  border-right: 1.5px dashed black;
+}
+
+#demand-and-supply .supply {
+  padding-left: 1em;
+}
+
+#demand-and-supply button {
+  color: white;
+  background-color: #D50032;
+  border-radius: 7px 7px 7px 7px;
+  border-style: solid;
+  border-color: #D50032;
+}
+
+#demand-and-supply button:hover {
+  background-color: #d6204b;
+  border-color: #d6204b;
+}
+
+#demand-and-supply .btn-icon {
+    display: inline;
+}
+
+#demand-and-supply .btn-icon button {
+  width: 28px;
+  height: 28px;
+}
+
+#demand-and-supply .btn-icon a {
+  width: 32px;
+  height: 32px;
+  display: block;
+  transition: .2s;
+  /* Hides text */
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#demand-and-supply .arrow-up {
+  background-image: url(../images/arrow4-up-white.svg);
+  background-repeat: no-repeat;
+}
+
+#demand-and-supply .arrow-down {
+  background-image: url(../images/arrow4-down-white.svg);
+  background-repeat: no-repeat;
+}
+
+#demand-and-supply .btn-reset {
+  background-image: url(../images/reset-white.svg);
+  background-repeat: no-repeat;
+}
+
+
+/* Social Media Icons
+------------------------------------------*/
+
+.social-media-icons {
+  max-width: 160px;
+}
+
+.social-media-icons ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.social-media-icons ul li {
+  margin-right: .5em;
+}
+
+.social-media-icons a {
+  width: 32px;
+  height: 32px;
+  display: block;
+  transition: .2s;
+  /* Hides text */
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.social-channels a:hover {
+  opacity: 0.7;
+}
+
+.youtube {
+  background-image: url(../images/youtube.svg);
+}
+
+.twitter {
+  background-image: url(../images/twitter.svg);
+}
+
+.instagram {
+  background-image: url(../images/instagram.svg);
+}
+
+.snapchat {
+  background-image: url(../images/snapchat.svg);
+}
+
+.facebook {
+  background-image: url(../images/facebook.svg);
+}
+
+.youtube:hover {
+  background-image: url(../images/youtube-hover.svg);
+}
+
+.twitter:hover {
+  background-image: url(../images/twitter-hover.svg);
+}
+
+.instagram:hover {
+  background-image: url(../images/instagram-hover.svg);
+}
+
+.snapchat:hover {
+  background-image: url(../images/snapchat-hover.svg);
+}
+
+.facebook:hover {
+  background-image: url(../images/facebook-hover.svg);
+}
+
+.green-box {
+  background: #018a60;
+  color: white;
+  padding: 1em 0;
+  margin-bottom: 1em;
+}
+
+.green-box h2 {
+  text-align: center;
+}
+
+
+/****************************************
+    Index styling
+****************************************/
+
+.twitter-index {
+  max-width: 800px;
+}
+
+.index-content iframe {
+  width: 100%;
+  min-height: 400px;
+}
+
+@media screen and (min-width: 64em) {
+  .index-content{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .index-content iframe {
+    width: 60%;
+    max-height: 600px;
+  }
+  .twitter-index {
+    max-width: 500px;
+  }
+}
+
+/*! Flickity v1.2.1
+http://flickity.metafizzy.co
+---------------------------------------------- */
+
+.flickity-enabled {
+  position: relative;
+}
+
+.flickity-enabled:focus {
+  outline: none;
+}
+
+.flickity-viewport {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.flickity img {
+  max-height: 800px;
+}
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* draggable */
+
+.flickity-enabled.is-draggable {
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+/* ---- previous/next buttons ---- */
+
+.flickity-prev-next-button {
+  position: absolute;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  background: hsla(0, 0%, 100%, 0.75);
+  cursor: pointer;
+  /* vertically center */
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.flickity-prev-next-button:hover {
+  background: white;
+}
+
+.flickity-prev-next-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #09F;
+}
+
+.flickity-prev-next-button:active {
+  opacity: 0.6;
+}
+
+.flickity-prev-next-button.previous {
+  left: 10px;
+}
+
+.flickity-prev-next-button.next {
+  right: 10px;
+}
+
+/* right to left */
+
+.flickity-rtl .flickity-prev-next-button.previous {
+  left: auto;
+  right: 10px;
+}
+
+.flickity-rtl .flickity-prev-next-button.next {
+  right: auto;
+  left: 10px;
+}
+
+.flickity-prev-next-button:disabled {
+  opacity: 0.3;
+  cursor: auto;
+}
+
+.flickity-prev-next-button svg {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 60%;
+  height: 60%;
+}
+
+.flickity-prev-next-button .arrow {
+  fill: #333;
+}
+
+/* ---- page dots ---- */
+
+.flickity-page-dots {
+  position: absolute;
+  width: 100%;
+  bottom: 5px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 1;
+}
+
+.flickity-rtl .flickity-page-dots {
+  direction: rtl;
+}
+
+.flickity-page-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #333;
+  border-radius: 50%;
+  border: 1px solid white;
+  opacity: 0.25;
+  cursor: pointer;
+}
+
+.flickity-page-dots .dot.is-selected {
+  opacity: 1;
+}
+
+/* Flickity responsive
+------------------------------------------*/
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.flickity img {
+  margin: 0 auto;
+  display: block;
+}
+
+.flickity div {
+  width: 100%;
+}
+
+.flickity {
+  margin-bottom: 2em;
+  height: 100%;
+}

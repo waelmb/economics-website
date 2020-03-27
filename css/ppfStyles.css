@@ -1,0 +1,101 @@
+/****************************************
+  Production Possibilities Fronteir styling
+****************************************/
+#ppf h2 {
+    text-align: center;
+}
+
+#ppf .upper {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 64em;
+  margin: 0;
+}
+
+#ppf .chart {
+  padding-left: 3em;
+  width: 600px;
+  position: relative;
+}
+
+#ppf .explanation {
+  border-radius: 16px;
+  border-style: dashed;
+  border-color: black;
+  padding: 16px;
+  margin: 16px;
+}
+
+#ppf .explanation-header {
+  display: inline-block;
+  margin: 0;
+}
+
+#ppf .lower {
+  text-align: center;
+  padding-bottom: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+#ppf .lower li {
+  width: 400px;
+}
+
+#ppf .align-sublist {
+    padding: 0px;
+    list-style-type: none;
+}
+#ppf .button-alignment {
+  display: flex;
+  justify-content: space-between;
+}
+
+#ppf button {
+  color: white;
+  background-color: #D50032;
+  border-radius: 7px 7px 7px 7px;
+  border-style: solid;
+  border-color: #D50032;
+}
+
+#ppf button:hover {
+  background-color: #d6204b;
+  border-color: #d6204b;
+}
+
+#ppf .btn-icon {
+    display: inline;
+}
+
+#ppf .btn-icon button {
+  width: 28px;
+  height: 28px;
+}
+
+#ppf .btn-icon a {
+  width: 32px;
+  height: 32px;
+  display: block;
+  transition: .2s;
+  /* Hides text */
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#ppf .arrow-up {
+  background-image: url(../images/arrow4-up-white.svg);
+  background-repeat: no-repeat;
+}
+
+#ppf .arrow-down {
+  background-image: url(../images/arrow4-down-white.svg);
+  background-repeat: no-repeat;
+}
+
+#ppf .btn-reset {
+  background-image: url(../images/reset-white.svg);
+  background-repeat: no-repeat;
+}
